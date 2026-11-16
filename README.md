@@ -164,4 +164,4 @@ A **Discovery-01 foi concluída**. O ambiente Java também foi validado; essa va
 
 **Carlos Alberto Virla Neto**
 
-GitHub: [@virla-carlos](https://github.com/virla-carlos)
+LinkedIn: [@Carlos Alberto](https://www.linkedin.com/in/carlos-alberto-915aab356/)
