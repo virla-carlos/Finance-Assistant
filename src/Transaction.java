@@ -25,8 +25,21 @@ public class Transaction {
             this.amount = amount;
         }
 
-        this.date = date;
-        this.type = type;
+        // Date rule validation
+        if (date == null){
+            throw new IllegalArgumentException("A data inserida não pode ser nula");
+        }else if (date.isAfter(LocalDate.now())){
+            throw new IllegalArgumentException("A data inserida não pode ser posterior ao dia de hoje");
+        }else{
+            this.date = date;
+        }
+
+        // Type rule validation
+        if (type == null){
+            throw new IllegalArgumentException("O tipo de movimentação não pode ser nulo");
+        }else{
+            this.type = type;
+        }
     }
 
     public String getDescription(){
