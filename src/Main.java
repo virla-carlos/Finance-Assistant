@@ -1,5 +1,6 @@
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Main{
     public static void main(String[] args){
@@ -18,14 +19,19 @@ public class Main{
                 TransactionType.EXPENSE
         );
 
-        System.out.printf("\nDescrição da movimentação: %s\n", firstTransaction.getDescription());
-        System.out.printf("Valor da movimentação: %.2f\n", firstTransaction.getAmount());
-        System.out.printf("Data de movimentação: %s\n", firstTransaction.getDate());
-        System.out.printf("Tipo de movimentação: %s\n", firstTransaction.getType());
+        ArrayList<Transaction> objectCollection = new ArrayList<>();
+        objectCollection.add(firstTransaction);
+        objectCollection.add(secondTransaction);
 
-        System.out.printf("\nDescrição da movimentação: %s\n", secondTransaction.getDescription());
-        System.out.printf("Valor da movimentação: %.2f\n", secondTransaction.getAmount());
-        System.out.printf("Data de movimentação: %s\n", secondTransaction.getDate());
-        System.out.printf("Tipo de movimentação: %s\n", secondTransaction.getType());
+        for (int i = 0; i < 2; i++){
+            System.out.println(
+                    "Descrição de movimentação: " + objectCollection.get(i).getDescription() + "\n" +
+                    "Valor de movimentação: " + objectCollection.get(i).getAmount() + "\n" +
+                    "Date de movimentação: " + objectCollection.get(i).getDate() + "\n" +
+                    "Tipo de movimentação: " + objectCollection.get(i).getType() + "\n"
+            );
+        }
+
+        System.out.println(objectCollection.size());
     }
 }
