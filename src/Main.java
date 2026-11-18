@@ -1,6 +1,5 @@
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.ArrayList;
 
 public class Main{
     public static void main(String[] args){
@@ -27,12 +26,10 @@ public class Main{
         );
 
         TransactionManager teste = new TransactionManager();
+
         teste.insertObjectInList(firstTransaction);
         teste.insertObjectInList(secondTransaction);
         teste.insertObjectInList(threeTransaction);
-
-        teste.verifyList();
-        teste.viewTransaction(firstTransaction);
-
+        teste.viewTransactions();
     }
 }

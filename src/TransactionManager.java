@@ -14,13 +14,20 @@ public class TransactionManager {
     }
 
     public void verifyList(){
-        System.out.println(collectionManager.size());
+        collectionManager.size();
     }
 
-    public void viewTransaction(Transaction object){
-        System.out.printf("\nDescrição de movimentação: %s\n",object.getDescription());
-        System.out.printf("Valor de movimentação: %s\n", object.getAmount());
-        System.out.printf("Data de movimentação: %s\n", object.getDate());
-        System.out.printf("Tipo de movimentação: %s\n", object.getType());
+    public void viewTransactions() {
+
+        if (collectionManager.isEmpty()) {
+            System.out.print("Nenhuma movimentação registrada");
+        }else{
+            for (int i = 0; i < collectionManager.size(); i++) {
+                System.out.printf("\nDescrição de movimentação: %s", collectionManager.get(i).getDescription());
+                System.out.printf("\nValor de movimentação: %s", collectionManager.get(i).getAmount());
+                System.out.printf("\nData de movimentação: %s", collectionManager.get(i).getDate());
+                System.out.printf("\nTipo de movimentação: %s \n", collectionManager.get(i).getType());
+            }
+        }
     }
 }
