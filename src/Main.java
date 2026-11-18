@@ -27,9 +27,9 @@ public class Main{
 
         TransactionManager teste = new TransactionManager();
 
-        teste.insertObjectInList(firstTransaction);
-        teste.insertObjectInList(secondTransaction);
-        teste.insertObjectInList(threeTransaction);
-        teste.viewTransactions();
+        teste.addTransaction(firstTransaction);
+        teste.addTransaction(secondTransaction);
+        teste.addTransaction(threeTransaction);
+        teste.displayTransaction();
     }
 }
