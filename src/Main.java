@@ -26,25 +26,13 @@ public class Main{
                 TransactionType.EXPENSE
         );
 
-        ArrayList<Transaction> objectCollection = new ArrayList<>();
-        objectCollection.add(firstTransaction);
-        objectCollection.add(secondTransaction);
-        objectCollection.add(threeTransaction);
+        TransactionManager teste = new TransactionManager();
+        teste.insertObjectInList(firstTransaction);
+        teste.insertObjectInList(secondTransaction);
+        teste.insertObjectInList(threeTransaction);
 
-        for (int i = 0; i < objectCollection.size(); i++){
-            System.out.printf("""
-                    \nDescrição de movimentação: %s
-                    Valor de movimentação: %s
-                    Data de movimentação: %s
-                    Tipo de movimentação; %s \n
-                    """,
-                    objectCollection.get(i).getDescription(),
-                    objectCollection.get(i).getAmount(),
-                    objectCollection.get(i).getDate(),
-                    objectCollection.get(i).getType()
-            );
-        }
+        teste.verifyList();
+        teste.viewTransaction(firstTransaction);
 
-        System.out.printf("Número de movimentações armazenadas sistema: %s\n", objectCollection.size());
     }
 }
