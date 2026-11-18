@@ -9,15 +9,15 @@ public class TransactionManager {
         this.collectionManager = collectionManager;
     }
 
-    public void insertObjectInList(Transaction object){
+    public void addTransaction(Transaction object){
         collectionManager.add(object);
     }
 
-    public void verifyList(){
+    public void getTransactionCount(){
         collectionManager.size();
     }
 
-    public void viewTransactions() {
+    public void displayTransaction() {
 
         if (collectionManager.isEmpty()) {
             System.out.print("Nenhuma movimentação registrada");
