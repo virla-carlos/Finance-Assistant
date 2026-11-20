@@ -15,14 +15,14 @@ public class Main{
                 "Supermercado",
                 new BigDecimal("150.58"),
                 LocalDate.of(2026,11,5),
-                TransactionType.EXPENSE
+                TransactionType.INCOME
         );
 
         Transaction threeTransaction = new Transaction(
                 "Steam",
                 new BigDecimal("100.00"),
                 LocalDate.of(2026, 11, 17),
-                TransactionType.EXPENSE
+                TransactionType.INCOME
         );
 
         TransactionManager teste = new TransactionManager();
@@ -31,5 +31,8 @@ public class Main{
         teste.addTransaction(secondTransaction);
         teste.addTransaction(threeTransaction);
         teste.displayTransaction();
+
+
+        teste.sumIncome();
     }
 }
