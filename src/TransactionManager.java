@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class TransactionManager {
@@ -29,5 +30,15 @@ public class TransactionManager {
                 System.out.printf("\nTipo de movimentação: %s \n", collectionManager.get(i).getType());
             }
         }
+    }
+
+    public void sumIncome(){
+        BigDecimal totalIncome = BigDecimal.ZERO;
+        for (int i = 0; i < collectionManager.size(); i++){
+            if (collectionManager.get(i).getType().equals(TransactionType.INCOME)){
+                totalIncome = totalIncome.add(collectionManager.get(i).getAmount());
+            }
+        }
+        System.out.printf("\nTeste de calculo do total de receitas: \n%s",totalIncome);
     }
 }
